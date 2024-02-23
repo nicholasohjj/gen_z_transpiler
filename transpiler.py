@@ -1,6 +1,7 @@
 import re
 import sys
 import subprocess
+import asyncio
 
 def transpile_code(source_code):
     """Transpile custom keywords in the source code to standard Python."""
@@ -60,13 +61,21 @@ def transpile_code(source_code):
     
     return transpiled_code
 
-
 def execute_transpiled_code(transpiled_code):
-    """Execute the transpiled Python code."""
+    """Execute the transpiled Python code, handling async functions."""
     try:
-        exec(transpiled_code, {"__builtins__": __builtins__}, {})
+        # Define a namespace for execution
+        local_namespace = {}
+        exec(transpiled_code, {"__builtins__": __builtins__, "asyncio": asyncio}, local_namespace)
+        
+        # Check for async functions and run them
+        for name, obj in local_namespace.items():
+            if asyncio.iscoroutinefunction(obj):
+                loop = asyncio.get_event_loop()
+                loop.run_until_complete(obj())
     except Exception as e:
         print(f"Error executing transpiled code: {e}")
+
 
 
 def main(input_file_path):
