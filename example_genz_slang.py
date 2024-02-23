@@ -1,53 +1,31 @@
-# Example script using Python slang mappings, modified for Python 3 print syntax
+# example.py
 
-# Define a function
-big brain say_hello():
-    yeet("What's up, fam!")
+# Custom function definition
+glow up greet():
+    yeet("Hello, world!")
+    bop()
 
-# Class declaration
-squad Person:
-    big brain __init__(self, name):
+# Custom class definition
+gang gang CoolClass:
+    def __init__(self, name):
+        byeet("Initializing...")
         self.name = name
     
-    big brain introduce(self):
-        yeet(f"Yo, I'm {self.name}")
+    glow up introduce(self):
+        byeet("Hello, I'm", self.name)
 
-# If-else control flow
-lowkey True:
-    yeet("This is so woke")
-highkey:
-    yeet("Nah, that's basic")
+# Main function to run everything
+glow up main():
+    greet()
+    obj = CoolClass("Python")
+    obj.introduce()
+    bet True:
+        yeet("It's true!")
+    facts:
+        yeet("It's false!")
+    
+    highkey waiting await async_function()
+    yeet("All done!")
 
-# For loop
-on repeat homie in ['Josh', 'Riley', 'Alex']:
-    yeet(f"Hey there, {homie}")
-
-# Try-Except block
-tryna catch:
-    risky_operation = 1 / 0
-busted ZeroDivisionError:
-    yeet("Bruh, can't divide by zero!")
-
-# Import statement
-flex math
-
-# Using a class
-homie = Person("Tyler")
-homie.introduce()
-
-# While loop
-counter = 3
-chillin counter > 0:
-    yeet(f"Countdown: {counter}")
-    counter -= 1
-
-# Lambda function
-quick_math = ghosting x: x + 10
-yeet(quick_math(5))
-
-# With statement
-catching vibes open('file.txt', 'r') as if file:
-    content = file.read()
-    yeet(content)
-
-# Fin.
+# Call the main function
+main()

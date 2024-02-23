@@ -9,49 +9,46 @@ def transpile_code(source_code):
     slang_mappings = {
         r'\byeet\b': 'print',
         # Control flow
-        r'\blowkey\b': 'if',  # If condition
-        r'\bhighkey\b': 'else',  # Else condition
-        r'\bwhat if\b': 'elif',  # Elif condition
-        r'\bon repeat\b': 'for',  # For loop
-        r'\bchillin\b': 'while',  # While loop
-        r'\bnext\b': 'continue',  # Continue loop
-        r'\bsnack\b': 'break',  # Break loop
-        r'\byolo\b': 'pass',  # Pass statement
-        r'\bghost\b': 'pass',  # Alternative to pass
-        r'\btryna catch\b': 'try',  # Try block
-        r'\bbusted\b': 'except',  # Except block
-        r'\bfinally tho\b': 'finally',  # Finally block
-        r'\bno cap\b': 'assert',  # Assert statement
-        r'\bbruh\b': 'raise',  # Raise exception
-
-        # Functions and classes
-        r'\bbig brain\b': 'def',  # Define a function
-        r'\bsquad\b': 'class',  # Define a class
-        r'\bhomies\b': 'from',  # From import statement
-        r'\bflex\b': 'import',  # Import statement
-        r'\bspill the tea\b': 'return',  # Return statement
-        r'\bsquad goals\b': 'global',  # Global declaration
-        r'\blocal vibes\b': 'nonlocal',  # Nonlocal declaration
-        r'\byield from the heart\b': 'yield from',  # Yield from
-        r'\bshare\b': 'yield',  # Yield statement
+        r'\bno cap\b': 'if',  # If condition, "no cap" means "seriously" or "for real"
+        r'\bfacts\b': 'else',  # Else condition, "facts" is used to agree or confirm
+        r'\bbet\b': 'elif',  # Elif condition, "bet" indicates agreement or acknowledgment
+        r'\bvibe check\b': 'for',  # For loop, "vibe check" assesses the situation or atmosphere
+        r'\bsimpin\b': 'while',  # While loop, "simpin" suggests a more focused, sometimes obsessive loop
+        r'\bslide\b': 'continue',  # Continue loop, "slide" implies moving on smoothly
+        r'\bdipped\b': 'break',  # Break loop, "dipped" means to leave abruptly
+        r'\bsend it\b': 'pass',  # Pass statement, "send it" means to go for it or proceed without hesitation
+        r'\bsend it\b': 'pass',  # Pass statement, "send it" means to go for it or proceed without hesitation
+        r'\bsus\b': 'try',  # Try block, "sus" means suspect or suspicious, indicating caution
+        r'\bcaught lackin\b': 'except',  # Except block, "caught lackin" means caught off guard
+        r'\bwe gucci\b': 'finally',  # Finally block, "we gucci" means all is good or resolved
+        r'\bpressed\b': 'assert',  # Assert statement, "pressed" means to insist or assert forcefully
+        r'\bthrow shade\b': 'raise',  # Raise exception, "throw shade" means to criticize or express disdain
 
         # Boolean and comparisons
-        r'\bwoke\b': 'True',  # True
-        r'\bbasic\b': 'False',  # False
-        r'\bnot even\b': 'not',  # Not
-        r'\band also\b': 'and',  # And
-        r'\bor like\b': 'or',  # Or
-        r'\bis legit\b': 'is',  # Is
-        r'\bin the crew\b': 'in',  # In
+        r'\blit\b': 'True',  # True, "lit" remains popular for excitement or awesomeness
+        r'\bsalty\b': 'False',  # False, "salty" means upset or bitter, indicating negativity
+        r'\bghosted\b': 'not',  # Not, "ghosted" means ignored or excluded, suggesting negation
+        r'\band I oop\b': 'and',  # And, "and I oop" adds dramatic pause or emphasis
+        r'\bperiodt\b': 'or',  # Or, "periodt" signifies emphasis or finality, used for alternatives
 
         # Others
-        r'\blit\b': 'del',  # Delete statement
-        r'\bcatching vibes\b': 'with',  # With statement
-        r'\bas if\b': 'as',  # As statement
-        r'\bdoing the most\b': 'async',  # Async declaration
-        r'\bwaiting on\b': 'await',  # Await statement
-        r'\bghosting\b': 'lambda',  # Lambda function
-        r'\bquick maths\b': 'lambda',  # Lambda function
+        r'\bcanceled\b': 'del',  # Delete statement, "canceled" means to reject or dismiss
+        r'\bchill with\b': 'with',  # With statement, "chill with" implies association or collaboration
+        r'\biconic\b': 'as',  # As statement, "iconic" signifies notable or significant alignment
+        r'\blowkey flex\b': 'async',  # Async declaration, "lowkey flex" suggests a subtle, understated action
+        r'\bhighkey waiting\b': 'await',  # Await statement, "highkey waiting" implies an eager or anxious wait
+        r'\bsnatched\b': 'lambda',  # Lambda function, "snatched" means impressive or on point, signifying a concise function
+
+                # Functions and classes
+        r'\bglow up\b': 'def',  # Define a function, "glow up" signifies transformation or improvement
+        r'\bgang gang\b': 'class',  # Define a class, "gang gang" expresses close association or teamwork
+        r'\bstan\b': 'from',  # From import statement, "stan" means to support or admire
+        r'\bflex\b': 'import',  # Import statement remains the same, as "flex" is still popular
+        r'\btea\b': 'return',  # Return statement, "tea" means truth or gossip, suggesting returning info
+        r'\bclout\b': 'global',  # Global declaration, "clout" symbolizes influence or power
+        r'\bjuiced\b': 'nonlocal',  # Nonlocal declaration, "juiced" means energized or empowered
+        r'\bhits different\b': 'yield',  # Yield statement, "hits different" means it has a unique impact
+
     }
     
     # Apply mappings
