@@ -7,18 +7,50 @@ def transpile_code(source_code):
     # Extended slang mappings
     slang_mappings = {
         r'\byeet\b': 'print',
-        r'\bbig brain\b': 'def',
-        r'\bno cap\b': 'assert',
-        r'\bon repeat\b': 'for',
-        r'\bghost\b': 'pass',
-        r'\blowkey\b': 'if',
-        r'\bhighkey\b': 'else',
-        r'\bsquad\b': 'class',
-        r'\bbusted\b': 'except',
-        r'\btryna catch\b': 'try',
-        r'\bflex\b': 'import',
-        r'\bspill the tea\b': 'return',
-        r'\bsus\b': 'raise'
+        # Control flow
+        r'\blowkey\b': 'if',  # If condition
+        r'\bhighkey\b': 'else',  # Else condition
+        r'\bwhat if\b': 'elif',  # Elif condition
+        r'\bon repeat\b': 'for',  # For loop
+        r'\bchillin\b': 'while',  # While loop
+        r'\bnext\b': 'continue',  # Continue loop
+        r'\bsnack\b': 'break',  # Break loop
+        r'\byolo\b': 'pass',  # Pass statement
+        r'\bghost\b': 'pass',  # Alternative to pass
+        r'\btryna catch\b': 'try',  # Try block
+        r'\bbusted\b': 'except',  # Except block
+        r'\bfinally tho\b': 'finally',  # Finally block
+        r'\bno cap\b': 'assert',  # Assert statement
+        r'\bbruh\b': 'raise',  # Raise exception
+
+        # Functions and classes
+        r'\bbig brain\b': 'def',  # Define a function
+        r'\bsquad\b': 'class',  # Define a class
+        r'\bhomies\b': 'from',  # From import statement
+        r'\bflex\b': 'import',  # Import statement
+        r'\bspill the tea\b': 'return',  # Return statement
+        r'\bsquad goals\b': 'global',  # Global declaration
+        r'\blocal vibes\b': 'nonlocal',  # Nonlocal declaration
+        r'\byield from the heart\b': 'yield from',  # Yield from
+        r'\bshare\b': 'yield',  # Yield statement
+
+        # Boolean and comparisons
+        r'\bwoke\b': 'True',  # True
+        r'\bbasic\b': 'False',  # False
+        r'\bnot even\b': 'not',  # Not
+        r'\band also\b': 'and',  # And
+        r'\bor like\b': 'or',  # Or
+        r'\bis legit\b': 'is',  # Is
+        r'\bin the crew\b': 'in',  # In
+
+        # Others
+        r'\blit\b': 'del',  # Delete statement
+        r'\bcatching vibes\b': 'with',  # With statement
+        r'\bas if\b': 'as',  # As statement
+        r'\bdoing the most\b': 'async',  # Async declaration
+        r'\bwaiting on\b': 'await',  # Await statement
+        r'\bghosting\b': 'lambda',  # Lambda function
+        r'\bquick maths\b': 'lambda',  # Lambda function
     }
     
     # Apply mappings
