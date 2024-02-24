@@ -33,37 +33,78 @@ Replace **`<path_to_your_slang_python_file.py>`** with the actual file path of y
 
 ## **Slang Keywords Mapping**
 
-Below is a partial list of the slang to Python keyword mappings supported by the transpiler:
+### **Slang Mappings**
+
+The transpiler includes mappings for various Python keywords, statements, and built-in functions to their Gen Z slang equivalents. Here are some of the slang mappings:
 
 - **Control Flow:**
-    - **`lowkey`** -> **`if`**
-    - **`highkey`** -> **`else`**
-    - **`on repeat`** -> **`for`**
-    - **`chillin`** -> **`while`**
-    - **`snack`** -> **`break`**
-- **Functions and Classes:**
-    - **`big brain`** -> **`def`**
-    - **`squad`** -> **`class`**
-    - **`flex`** -> **`import`**
-    - **`spill the tea`** -> **`return`**
+    - **`yeet`**: Replaces **`print`** but only when used as a function call.
+    - **`no cap`**: Translates to **`if`**.
+    - **`facts`**: Translates to **`else`**.
+    - **`bet`**: Translates to **`elif`**.
+    - **`vibe check`**: Translates to **`for`**.
+    - **`simpin`**: Translates to **`while`**.
+    - **`slide`**: Translates to **`continue`**.
+    - **`dipped`**: Translates to **`break`**.
+    - **`send it`**: Translates to **`pass`**.
+    - **`sus`**: Translates to **`try`**.
+    - **`caught lackin`**: Translates to **`except`**.
+    - **`we gucci`**: Translates to **`finally`**.
+    - **`pressed`**: Translates to **`assert`**.
+    - **`throw shade`**: Translates to **`raise`**.
 - **Boolean and Comparisons:**
-    - **`woke`** -> **`True`**
-    - **`basic`** -> **`False`**
-    - **`not even`** -> **`not`**
-- **Others:**
-    - **`lit`** -> **`del`**
-    - **`catching vibes`** -> **`with`**
+    - **`lit`**: Translates to **`True`**.
+    - **`salty`**: Translates to **`False`**.
+    - **`ghosted`**: Translates to **`not`**.
+    - **`and I oop`**: Translates to **`and`**.
+    - **`periodt`**: Translates to **`or`**.
+- **Other Keywords:**
+    - **`canceled`**: Translates to **`del`**.
+    - **`chill with`**: Translates to **`with`**.
+    - **`iconic`**: Translates to **`as`**.
+    - **`lowkey flex`**: Translates to **`async`**.
+    - **`highkey waiting`**: Translates to **`await`**.
+    - **`snatched`**: Translates to **`lambda`**.
+- **Functions and Classes:**
+    - **`glow up`**: Defines a function with **`def`**.
+    - **`gang gang`**: Defines a class with **`class`**.
+    - **`stan`**: Translates to **`from`** in import statements.
+    - **`flex`**: Translates to **`import`**.
+    - **`tea`**: Translates to **`return`**.
+    - **`clout`**: Translates to **`global`**.
+    - **`juiced`**: Translates to **`nonlocal`**.
+    - **`hits different`**: Translates to **`yield`**.
+- **Built-in Functions:**
+    - **`spill the tea`**: Translates to **`input`**.
+    - **`flex on`**: Translates to **`len`**.
+    - **`glitched`**: Placeholder for errors.
+    - **`finesse`**: Translates to **`str`**.
+    - **`stacked`**: Translates to **`int`**.
+    - **`vibes`**: Translates to **`list`**.
+    - **`squad`**: Translates to **`dict`**.
+    - **`iced out`**: Translates to **`float`**.
+    - **`fire`**: Translates to **`max`**.
+    - **`frozen`**: Translates to **`min`**.
+    - **`snack`**: Translates to **`sum`**.
+    - **`mood`**: Translates to **`type`**.
+    - **`glitching`**: Placeholder for raising errors.
+    - **`ghost`**: Translates to **`exit`**.
 
-Refer to the source code for the complete list of mappings.
+### **Extending the Slang Mappings**
+
+To extend the slang mappings, add new key-value pairs to the **`slang_mappings`** dictionary, where the key is a compiled regular expression matching the slang term and the value is the standard Python equivalent.
+
+### **Limitations**
+
+The transpiler uses regular expressions for syntax translation, which may not perfectly handle all Python syntax nuances or complex code structures. It's intended for educational purposes.
 
 ## **Contributing**
 
 Contributions to expand the slang dictionary or improve the tool are welcome. Please follow standard open-source contribution guidelines.
+
 
 ## **License**
 
 This tool is provided under the MIT License. See the LICENSE file for more details.
 
 ---
-
-This README provides a concise overview, installation and usage instructions, a brief listing of features, and contribution guidelines. Adjust the content as needed based on the project's evolution and specific requirements.

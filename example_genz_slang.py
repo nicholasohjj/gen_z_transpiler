@@ -1,31 +1,21 @@
-# example.py
+yeet("Hello world")
 
-# Custom function definition
-glow up greet():
-    yeet("Hello, world!")
-    bop()
+x = 20
+no cap x > 10:
+    yeet("x is greater than 10")
+bet x == 10:
+    yeet("x is exactly 10")
+facts:
+    yeet("x is less than 10")
 
-# Custom class definition
-gang gang CoolClass:
-    def __init__(self, name):
-        byeet("Initializing...")
-        self.name = name
-    
-    glow up introduce(self):
-        byeet("Hello, I'm", self.name)
+vibe check i in range(5):
+    yeet(f"Looping: {i}")
 
-# Main function to run everything
-glow up main():
-    greet()
-    obj = CoolClass("Python")
-    obj.introduce()
-    bet True:
-        yeet("It's true!")
-    facts:
-        yeet("It's false!")
-    
-    highkey waiting await async_function()
-    yeet("All done!")
+simpin True:
+    yeet("This will run once!")
+    dipped
 
-# Call the main function
-main()
+glow up add(a, b):
+    tea a + b
+
+yeet(add(10, 20))
